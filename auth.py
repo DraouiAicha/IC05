@@ -1,6 +1,14 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver import ActionChains
+from selenium.common.exceptions import NoSuchElementException
+import os
+import inspect
+
+#récuperer le chemin du fichier actuel pour pouvoir importer d'autres fichiers/methodes (os.getcwd ne convient pas)
+script_path = (inspect.getfile(lambda: None)).rsplit('\\',1)[0]
+os.chdir(script_path)
+import gather
 
 
 # Init navigateur
@@ -19,9 +27,14 @@ ActionChains(driver)\
     .perform()
 
 # Appui sur le bouton Suivant
-next_button = driver.find_element(
+try:
+    next_button = driver.find_element(
     by=By.XPATH, value="//span[contains(text(), 'Suivant')]"
-)
+    )
+except NoSuchElementException: #ATTENTION: text pas forcement en français, cas où text en anglais (bouton "Next")
+    next_button = driver.find_element(
+    by=By.XPATH, value="//span[contains(text(), 'Next')]"
+    )
 ActionChains(driver)\
     .click(next_button)\
     .perform()
@@ -35,8 +48,13 @@ ActionChains(driver)\
     .perform()
 
 # Appui sur le bouton Suivant
-next_button = driver.find_element(
+try:
+    next_button = driver.find_element(
     by=By.XPATH, value="//span[contains(text(), 'Suivant')]"
+    )
+except NoSuchElementException: #ATTENTION: text pas forcement en français, cas où text en anglais (bouton "Next")
+    next_button = driver.find_element(
+    by=By.XPATH, value="//span[contains(text(), 'Next')]"
 )
 ActionChains(driver)\
     .click(next_button)\
@@ -52,10 +70,20 @@ ActionChains(driver)\
     .perform()
 
 #Appui sur le bouton Se Connecter
-login_button = driver.find_element(
+try:
+    login_button = driver.find_element(
     by=By.XPATH, value="//span[contains(text(), 'Se connecter')]"
-)
+    )
+except NoSuchElementException: #cas text anglais
+    login_button = driver.find_element(
+    by=By.XPATH, value="//span[contains(text(), 'Log in')]")
+
 ActionChains(driver)\
     .click(login_button)\
     .perform()
+
+#recuperation du texte relatif à la requete (prototype/test)
+scraper = gather.Scraper(driver)
+#scraper.scroll_until_count(20)
+scraper.scrape_text()
 
