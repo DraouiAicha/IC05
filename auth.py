@@ -16,6 +16,7 @@ import gather
 driver = webdriver.Firefox()
 
 driver.get("https://twitter.com/search?q=chatgpt%20lang%3Afr%20-filter%3Alinks%20-filter%3Areplies&src=typed_query")
+
 driver.implicitly_wait(10)
 
 # Authentification
@@ -61,7 +62,7 @@ except NoSuchElementException: #ATTENTION: text pas forcement en français, cas 
 ActionChains(driver)\
     .click(next_button)\
     .perform()
-time.sleep(1) #delai pour eviter soucis liés à la connection
+time.sleep(2) #delai pour eviter soucis liés à la connection
 
 #Complétion mot de passe
 password_input = driver.find_element(
@@ -80,14 +81,16 @@ try:
 except NoSuchElementException: #cas text anglais
     login_button = driver.find_element(
     by=By.XPATH, value="//span[contains(text(), 'Log in')]")
+time.sleep(1) #delai pour eviter soucis liés à la connection
 
 ActionChains(driver)\
     .click(login_button)\
     .perform()
-time.sleep(1) #delai pour eviter soucis liés à la connection
+time.sleep(2) #delai pour eviter soucis liés à la connection
 
 #recuperation du texte relatif à la requete (prototype/test)
 scraper = gather.Scraper(driver)
+url_search = gather.construct_search_term('chatgpt', filter_links = False, filter_replies = False)
 #scraper.scroll_until_count(20)
-scraper.data_acquisition()
+scraper.data_acquisition(url = url_search)
 

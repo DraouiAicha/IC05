@@ -524,3 +524,290 @@ Read port: 57129
 DevTools listening on ws://127.0.0.1:57122/devtools/browser/22cc3f3b-ed69-4879-87e7-5998c5cea333
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://twitter.com."
 1698874383312	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1699451482917	geckodriver	INFO	Listening on 127.0.0.1:55579
+1699451485955	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55580" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Luc\\AppData\\Local\\Temp\\rust_mozprofile4Pmc8L"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1699451486240	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1699451486311	Marionette	INFO	Listening on port 55588
+WebDriver BiDi listening on ws://127.0.0.1:55580
+Read port: 55588
+1699451486420	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:55580/devtools/browser/a0678c2f-de03-425b-a127-1cbc741b9c10
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://twitter.com."
+1699451517065	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://abs.twimg.com/responsive-web/client-web-legacy/main.312cdf0a.js, line 1: Script terminated by timeout at:
+_/e/this._updateSessionStorage@https://abs.twimg.com/responsive-web/client-web-legacy/main.312cdf0a.js:1:2759416
+
+1699451840691	Marionette	INFO	Stopped listening on port 55588
+Dynamically enable window occlusion 1
+JavaScript error: chrome://remote/content/marionette/cert.sys.mjs, line 51: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+!!! error running onStopped callback: TypeError: callback is not a function
+1699451840721	WebDriver BiDi	ERROR	Failed to stop protocol: [Exception... "Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]"  nsresult: "0x80040111 (NS_ERROR_NOT_AVAILABLE)"  location: "JS frame :: chrome://remote/content/marionette/cert.sys.mjs :: allowAllCerts.disable :: line 51"  data: no] Stack trace: allowAllCerts.disable()@cert.sys.mjs:51
+destrJavaScript warning: https://abs.twimg.com/responsive-web/client-web-legacy/main.312cdf0a.js, line 1: Script terminated by timeout at:
+_/e/this._updateSessionStorage@https://abs.twimg.com/responsive-web/client-web-legacy/main.312cdf0a.js:1:2759416
+
+1699451841673	Marionette	INFO	Stopped listening on port 55656
+Dynamically enable window occlusion 1
+JavaScript error: chrome://remote/content/marionette/cert.sys.mjs, line 51: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+!!! error running onStopped callback: TypeError: callback is not a function
+1699451841701	WebDriver BiDi	ERROR	Failed to stop protocol: [Exception... "Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]"  nsresult: "0x80040111 (NS_ERROR_NOT_AVAILABLE)"  location: "JS frame :: chrome://remote/content/marionette/cert.sys.mjs :: allowAllCerts.disable :: line 51"  data: no] Stack trace: allowAllCerts.disable()@cert.sys.mjs:51
+destroy()@Session.sys.mjs:239
+deleteSession()@WebDriverBiDi.sys.mjs:140
+stop()@WebDriverBiDi.sys.mjs:228
+responsive-web/client-web-legacy/bundle.NetworkInstrument.1aed29fa.js)
+JavaScript error: https://abs.twimg.com/responsive-web/client-web-legacy/vendor.12df6d8a.js, line 99: Error: ApiError: https://twitter.com/i/api/1.1/strato/column/None/1718004882949500928,Windows%2FFirefox,pushNotifications/clients/permissionsState HTTP-0 codes:[1004]
+JavaScript error: https://abs.twimg.com/responsive-web/client-web-legacy/vendor.12df6d8a.js, line 99: Error: ApiError: https://api.twitter.com/1.1/account/settings.json HTTP-0 codes:[1004]
+1699451602554	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://abs.twimg.com/responsive-web/client-web-legacy/main.312cdf0a.js, line 1: Script terminated by timeout at:
+_/e/this._updateSessionStorage@https://abs.twimg.com/responsive-web/client-web-legacy/main.312cdf0a.js:1:2759416
+
+1699451842609	Marionette	INFO	Stopped listening on port 55739
+Dynamically enable window occlusion 1
+ces.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1699451806101	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1699451806177	Marionette	INFO	Listening on port 55861
+WebDriver BiDi listening on ws://127.0.0.1:55854
+Read port: 55861
+1699451806290	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:55854/devtools/browser/62474d68-fb56-484c-9366-f0a7a47212b9
+JavaScript warning: https://abs.twimg.com/responsive-web/client-web-legacy/main.312cdf0a.js, line 1: Script terminated by timeout at:
+_/e/this._updateSessionStorage@https://abs.twimg.com/responsive-web/client-web-legacy/main.312cdf0a.js:1:2759416
+
+1699451836327	Marionette	INFO	Stopped listening on port 55861
+Dynamically enable window occlusion 1
+console.error: Region.sys.mjs: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.sys.mjs: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.sys.mjs", 411))
+1699451836356	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, channelStatus: 2147500036, errorCode: 2, reason: error
+JavaScript error: chrome://remote/content/marionette/cert.sys.mjs, line 51: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+!!! error running onStopped callback: TypeError: callback is not a function
+1699451836362	WebDriver BiDi	ERROR	Failed to stop protocol: [Exception... "Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]"  nsresult: "0x80040111 (NS_ERROR_NOT_AVAILABLE)"  location: "JS frame :: chrome://remote/content/marionette/cert.sys.mjs :: allowAllCerts.disable :: line 51"  data: no] Stack trace: allowAllCerts.disable()@cert.sys.mjs:51
+destroy()@Session.sys.mjs:239
+deleteSession()@WebDriverBiDi.sys.mjs:140
+stop()@WebDriverBiDi.sys.mjs:228
+observe()@resource://gre/modules/AsyncShutdown.sys.mjs:573
+console.error: (new Error("Polling for changes failed: NetworkError: Network request failed.", "resource://services-settings/remote-settings.sys.mjs", 321))
+1699451844272	geckodriver	INFO	Listening on 127.0.0.1:55918
+1699451847297	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55919" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Luc\\AppData\\Local\\Temp\\rust_mozprofileawIZDh"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1699451847487	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1699451847558	Marionette	INFO	Listening on port 55927
+WebDriver BiDi listening on ws://127.0.0.1:55919
+Read port: 55927
+1699451847703	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:55919/devtools/browser/73733017-88dc-4f0d-a6cd-b77a943a4a1e
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://twitter.com."
+1699451878541	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://abs.twimg.com/responsive-web/client-web-legacy/main.312cdf0a.js, line 1: Script terminated by timeout at:
+clientEvent@https://abs.twimg.com/responsive-web/client-web-legacy/main.312cdf0a.js:1:297738
+_/Un/<@https://abs.twimg.com/responsive-web/client-web-legacy/main.312cdf0a.js:1:481124
+_/t/r.flushOnExit@https://abs.twimg.com/responsive-web/client-web-legacy/main.312cdf0a.js:1:478305
+_/Ln/<@https://abs.twimg.com/responsive-web/client-web-legacy/main.312cdf0a.js:1:480884
+
+1699453966829	Marionette	INFO	Stopped listening on port 55927
+Dynamically enable window occlusion 1
+
+1699451919642	Marionette	INFO	Listening on port 56003
+WebDriver BiDi listening on ws://127.0.0.1:55996
+Read port: 56003
+1699451919746	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:55996/devtools/browser/7a68c5a4-3160-4844-9ed2-595bc70d3be5
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://twitter.com."
+1699451935023	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1699451950873	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://abs.twimg.com/responsive-web/client-web-legacy/main.312cdf0a.js, line 1: Script terminated by timeout at:
+_/e/this._updateSessionStorage@https://abs.twimg.com/responsive-web/client-web-legacy/main.312cdf0a.js:1:2759416
+
+1699453967697	Marionette	INFO	Stopped listening on port 56003
+Dynamically enable window occlusion 1
+ces.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1699451975407	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1699451975479	Marionette	INFO	Listening on port 56081
+WebDriver BiDi listening on ws://127.0.0.1:56074
+Read port: 56081
+1699451975590	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:56074/devtools/browser/8606aa1b-c7ee-4b43-91cd-08e2fc2196fe
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://twitter.com."
+1699451991104	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: https://twitter.com/search?q=chatgpt%20lang%3Afr%20-filter%3Alinks%20-filter%3Areplies&src=typed_query, line 158: ChunkLoadError: Loading chunk shared~loader.directMessagesData~loader.Typeahead~loader.DMDrawer~ondemand.DirectMessagesCrypto~bundle.Commun failed.
+(error: https://abs.twimg.com/responsive-web/client-web-legacy/shared~loader.directMessagesData~loader.Typeahead~loader.DMDrawer~ondemand.DirectMessagesCrypto~bundle.Commun.6ad3ceea.js)
+1699452006914	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: moz-extension://50eacd17-d528-444d-8e13-af37f69dfa7b/injections/js/bug1739489-draftjs-beforeinput.js, line 32: Script terminated by timeout at:
+.value<@moz-extension://50eacd17-d528-444d-8e13-af37f69dfa7b/injections/js/bug1739489-draftjs-beforeinput.js:32:36
+l@https://abs.twimg.com/responsive-web/client-web-legacy/vendor.12df6d8a.js:74:181147
+_/Pe/<@https://abs.twimg.com/responsive-web/client-web-legacy/vendor.12df6d8a.js:74:180770
+
+1699453968413	Marionette	INFO	Stopped listening on port 56081
+Dynamically enable window occlusion 1
+ enabled
+Dynamically enable window occlusion 0
+1699452038004	Marionette	INFO	Listening on port 56165
+WebDriver BiDi listening on ws://127.0.0.1:56158
+Read port: 56165
+1699452038113	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:56158/devtools/browser/be844777-3e50-4605-b468-2b46061c9910
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://twitter.com."
+1699452053830	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1699452067942	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://abs.twimg.com/responsive-web/client-web-legacy/main.312cdf0a.js, line 1: Script terminated by timeout at:
+_/e/this._updateSessionStorage@https://abs.twimg.com/responsive-web/client-web-legacy/main.312cdf0a.js:1:2759416
+
+1699453969247	Marionette	INFO	Stopped listening on port 56165
+Dynamically enable window occlusion 1
+ces.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1699452199075	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1699452199156	Marionette	INFO	Listening on port 56259
+WebDriver BiDi listening on ws://127.0.0.1:56252
+Read port: 56259
+1699452199261	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:56252/devtools/browser/a2dee6bf-bb93-4a20-a211-300d364642a9
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://twitter.com."
+1699452214743	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1699452229656	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://abs.twimg.com/responsive-web/client-web-legacy/main.312cdf0a.js, line 1: Script terminated by timeout at:
+_/e/this._updateSessionStorage@https://abs.twimg.com/responsive-web/client-web-legacy/main.312cdf0a.js:1:2759416
+
+1699453970057	Marionette	INFO	Stopped listening on port 56259
+Dynamically enable window occlusion 1
+1699453972129	geckodriver	INFO	Listening on 127.0.0.1:56822
+1699453975167	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56823" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Luc\\AppData\\Local\\Temp\\rust_mozprofileQs76Z7"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1699453975366	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1699453975437	Marionette	INFO	Listening on port 56831
+WebDriver BiDi listening on ws://127.0.0.1:56823
+Read port: 56831
+1699453975542	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:56823/devtools/browser/24e2ca5e-1421-4ba2-83ec-1ce2335c58a7
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://twitter.com."
+JavaScript error: https://twitter.com/search?q=chatgpt%20lang%3Afr%20-filter%3Alinks%20-filter%3Areplies&src=typed_query, line 158: ChunkLoadError: Loading chunk shared~loader.AudioDock~loader.Typeahead~loader.AppModules~loader.DMDrawer~bundle.Articles~bundle.AudioSpaceD failed.
+(error: https://abs.twimg.com/responsive-web/client-web-legacy/shared~loader.AudioDock~loader.Typeahead~loader.AppModules~loader.DMDrawer~bundle.Articles~bundle.AudioSpaceD.579ee64a.js)
+JavaScript error: https://twitter.com/search?q=chatgpt%20lang%3Afr%20-filter%3Alinks%20-filter%3Areplies&src=typed_query, line 158: ChunkLoadError: Loading chunk shared~loader.AudioDock~loader.Typeahead~loader.AppModules~loader.DMDrawer~bundle.Articles~bundle.AudioSpaceD failed.
+(error: https://abs.twimg.com/responsive-web/client-web-legacy/shared~loader.AudioDock~loader.Typeahead~loader.AppModules~loader.DMDrawer~bundle.Articles~bundle.AudioSpaceD.579ee64a.js)
+JavaScript error: https://twitter.com/search?q=chatgpt%20lang%3Afr%20-filter%3Alinks%20-filter%3Areplies&src=typed_query, line 158: ChunkLoadError: Loading chunk loader.richScribeAction failed.
+(error: https://abs.twimg.com/responsive-web/client-web-legacy/loader.richScribeAction.4035bc4a.js)
+JavaScript error: https://twitter.com/search?q=chatgpt%20lang%3Afr%20-filter%3Alinks%20-filter%3Areplies&src=typed_query, line 158: ChunkLoadError: Loading chunk bundle.NetworkInstrument failed.
+(error: https://abs.twimg.com/responsive-web/client-web-legacy/bundle.NetworkInstrument.1aed29fa.js)
+1699454006345	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37\n"
+1699454399710	geckodriver	INFO	Listening on 127.0.0.1:57058
+1699454402742	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57059" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Luc\\AppData\\Local\\Temp\\rust_mozprofilegaigrz"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1699454402937	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1699454403008	Marionette	INFO	Listening on port 57066
+WebDriver BiDi listening on ws://127.0.0.1:57059
+Read port: 57066
+1699454403116	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:57059/devtools/browser/f8676d92-fcb5-447b-8c8b-2aa283a6777a
+1699454435881	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
