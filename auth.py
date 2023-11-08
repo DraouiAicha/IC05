@@ -4,6 +4,7 @@ from selenium.webdriver import ActionChains
 from selenium.common.exceptions import NoSuchElementException
 import os
 import inspect
+import time
 
 #récuperer le chemin du fichier actuel pour pouvoir importer d'autres fichiers/methodes (os.getcwd ne convient pas)
 script_path = (inspect.getfile(lambda: None)).rsplit('\\',1)[0]
@@ -15,7 +16,7 @@ import gather
 driver = webdriver.Firefox()
 
 driver.get("https://twitter.com/search?q=chatgpt%20lang%3Afr%20-filter%3Alinks%20-filter%3Areplies&src=typed_query")
-driver.implicitly_wait(5)
+driver.implicitly_wait(10)
 
 # Authentification
 
@@ -25,6 +26,7 @@ text_input = driver.find_element(
 ActionChains(driver)\
     .send_keys_to_element(text_input, "isabelle.massinon@etu.utc.fr")\
     .perform()
+time.sleep(2) #delai pour eviter soucis liés à la connection
 
 # Appui sur le bouton Suivant
 try:
@@ -38,7 +40,7 @@ except NoSuchElementException: #ATTENTION: text pas forcement en français, cas 
 ActionChains(driver)\
     .click(next_button)\
     .perform()
-
+time.sleep(1) #delai pour eviter soucis liés à la connection
 
 #  Complétion du username
 text_input = driver.find_element(
@@ -46,7 +48,7 @@ text_input = driver.find_element(
 ActionChains(driver)\
     .send_keys_to_element(text_input, "CCinques59752")\
     .perform()
-
+time.sleep(1) #delai pour eviter soucis liés à la connection
 # Appui sur le bouton Suivant
 try:
     next_button = driver.find_element(
@@ -59,7 +61,7 @@ except NoSuchElementException: #ATTENTION: text pas forcement en français, cas 
 ActionChains(driver)\
     .click(next_button)\
     .perform()
-
+time.sleep(1) #delai pour eviter soucis liés à la connection
 
 #Complétion mot de passe
 password_input = driver.find_element(
@@ -68,6 +70,7 @@ password_input = driver.find_element(
 ActionChains(driver)\
     .send_keys_to_element(password_input, "IC05*Twitter")\
     .perform()
+time.sleep(1) #delai pour eviter soucis liés à la connection
 
 #Appui sur le bouton Se Connecter
 try:
@@ -81,9 +84,10 @@ except NoSuchElementException: #cas text anglais
 ActionChains(driver)\
     .click(login_button)\
     .perform()
+time.sleep(1) #delai pour eviter soucis liés à la connection
 
 #recuperation du texte relatif à la requete (prototype/test)
 scraper = gather.Scraper(driver)
 #scraper.scroll_until_count(20)
-scraper.scrape_text()
+scraper.data_acquisition()
 
