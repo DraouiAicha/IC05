@@ -5,9 +5,10 @@ from selenium.common.exceptions import NoSuchElementException
 from twitter_scraper_selenium import get_profile_details #uses  twiitter-scraper-selenium project from github
 import inspect
 import re
-from datetime import datetime as dt
+from datetime import datetime
 from datetime import timedelta
 import time
+import csv
 
 def construct_search_term(query, hashtag = '', language = 'fr', filter_replies = True, filter_links = True, min_likes = 0, min_faves = 0, min_retweets = 0, from_date = '', until_date = '' ):
     #NOTE: dates MUST be formatted as YYYY-MM-DD str
@@ -57,6 +58,49 @@ class Scraper:
         self.raw = []
         #self
 
+    def __parse_date__(self, date_str):
+        # Define regular expressions for each date format
+        month_day_regex = re.compile(r'([A-Za-z]{3})\s(\d{2})$')
+        age_minutes_regex = re.compile(r'(\d+)m')
+        age_hours_regex = re.compile(r'(\d+)h')
+        full_timestamp_regex = re.compile(r'([A-Za-z]{3})\s(\d{2})\s{0,1},\s{0,1}(\d{4})')
+
+        # Match different formats
+        match_month_day = month_day_regex.match(date_str)
+        match_age_minutes = age_minutes_regex.match(date_str)
+        match_age_hours = age_hours_regex.match(date_str)
+        match_full_timestamp = full_timestamp_regex.match(date_str)
+
+        current_timestamp = datetime.now()
+
+        if (match_month_day):
+            # Format: Month + day
+            month, day = match_month_day.groups()
+            year = current_timestamp.year
+            return f"{int(year):04d}-{datetime.strptime(month, '%b').month:02d}-{int(day):02d}"
+
+
+        elif match_age_minutes:
+            # Format: Age in minutes
+            minutes = int(match_age_minutes.group(1))
+            return (current_timestamp - timedelta(minutes=minutes)).strftime("%Y-%m-%d")
+
+        elif match_age_hours:
+            # Format: Age in hours
+            hours = int(match_age_hours.group(1))
+            return (current_timestamp - timedelta(hours=hours)).strftime("%Y-%m-%d")
+
+        elif match_full_timestamp:
+            # Format: Full timestamp
+            month, day, year = match_full_timestamp.groups()
+            return f"{int(year):04d}-{month}-{int(day):02d}"
+
+        else:
+            # Invalid format or other cases
+            return '1970-01-01'
+            #return current_timestamp.strftime("%Y-%m-%d")
+
+
     def __scrape_current__(self):
         #temp repositories for output of method
         self.usernames_temp = []
@@ -96,37 +140,9 @@ class Scraper:
             raw_info = raw_info.replace('|','')
             raw_info = raw_info.replace('·','')
 
+            date_str = self.__parse_date__(raw_info)
+            self.dates_temp.append(date_str)
 
-            try:
-                # DATE warning: not standard datetime format, four possible cases
-                # CASE 1: very new tweet (<1h)
-                if (type(re.search("[0-9]{1,2}[m]",raw_info) is re.Match)): #tweet date of format "XXm"
-                    tweet_age = int(re.findall("[0-9]{1,2}[m]",raw_info)[0][:-1]) #extract tweet age in minutes
-                    tweet_tstamp = dt.now() - time(minutes = tweet_age) #mainly checking if tweet is from today
-                    self.dates_temp.append(tweet_tstamp.date())
-                # CASE 2: new (1-24h) tweet
-                elif (type(re.search("[0-9]{1,2}[h]",raw_info) is re.Match)): #tweet date of format "XXh"
-                    tweet_age = int(re.findall("[0-9]{1,2}[h]",raw_info)[0][:-1]) #extract tweet age in minutes
-
-                    tweet_tstamp = dt.now() - time(hours = tweet_age) #mainly checking if tweet is from today
-                    self.dates_temp.append(tweet_tstamp.date())
-                #CASE 3: old tweet from current year
-                elif(type(re.search("[a-zA-Z]{3}[\s][0-9]{1,2}$",raw_info) is re.Match)): # date of format ex: Oct 30 [endl] (no year)
-
-                    tweet_tstamp = dt.strptime(f"{raw_info+' '}{datetime.now().year}", "%b %d %Y") #converts twitter timestamp to  datetime format
-                    self.dates_temp.append(tweet_tstamp)
-                #CASE 4: really old tweet (previous year)
-                elif(type(re.search("[a-zA-Z]{3}[\s][0-9]{1,2}[,][\s][0-9]{4}",raw_info) is re.Match)): # date of format ex: Oct 30, 2022
-
-                    tweet_tstamp = dt.strptime(f"{raw_info.replace(',',' ')}", "%b %d %Y") #converts twitter timestamp to  datetime format
-                    self.dates_temp.append(tweet_tstamp)
-                else: #error with timestamp/invalid timestamp
-
-                    self.dates_temp.append(raw_info)
-            except:
-                #ERROR, filling in with default/placeholder date
-                #print(raw_info)
-                self.dates_temp.append(raw_info)
         for txt in raw_scrape_tweets: #extract text body
             tweet_txt = txt.text
             self.tweets_temp.append(tweet_txt)
@@ -204,9 +220,52 @@ class Scraper:
             current_count = len(self.tweets)
 
 
+    def write_tweets_to_csv(self, dest_filename, sep = ';', new_line =''):
+
+        # Combine lists into a list of lists
+        data = [self.dates, self.usernames, self.handles, self.tweets]
+
+        # Transpose the data to have lists as rows and columns as columns
+        data_transposed = list(map(list, zip(*data)))
+
+        # Add a title for each column
+        header = ['Date', 'Username', 'Handle', 'Tweet body']
+        csv_format = {
+            'delimiter': ',',
+            'quotechar': '"',
+            'quoting': csv.QUOTE_MINIMAL
+        }
 
 
-       # self.driver.execute_script('window.scrollBy(0, 2000)')
+    # Write to CSV file with specified format
+        with open(dest_filename, 'w', newline=new_line,  encoding='utf-8') as csv_file:
+            writer = csv.writer(csv_file, **csv_format)
+            # Write the header
+            writer.writerow(header)
+            # Write the data
+            writer.writerows(data_transposed)
+
+
+# NOT CURRENTLY WORKING
+
+    def scrape_user_data(self, search_from_dict = False, search_other_users = False): #uses twitter handles to extract
+        #for handle in self.handles[:1]:
+
+        handle = self.handles[0]
+        #if handle == '@NA':
+        #        continue #if handle is invalid, go to next
+        #else:
+        username = handle[1:]
+
+        user_url = 'https://twitter.com/'+username
+        print(user_url)
+        print(username)
+        field = '/'+username+'/following'
+        print(field)
+        self.driver.get(user_url) #acquire web page
+
+        self.followers_raw = self.driver.find_element( by=By.PARTIAL_LINK_TEXT, value=field)
+
 
 
 

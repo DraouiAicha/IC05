@@ -799,9 +799,12 @@ capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
 takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37
 
 console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:287:37\n"
-1699454399710	geckodriver	INFO	Listening on 127.0.0.1:57058
-1699454402742	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57059" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Luc\\AppData\\Local\\Temp\\rust_mozprofilegaigrz"
-console.warn: services.settings: Ignoring preference override of remote settings server
+JavaScript warning: https://abs.twimg.com/responsive-web/client-web-legacy/main.312cdf0a.js, line 1: Script terminated by timeout at:
+_/e/this._updateSessionStorage@https://abs.twimg.com/responsive-web/client-web-legacy/main.312cdf0a.js:1:2759416
+
+1699460761458	Marionette	INFO	Stopped listening on port 56831
+Dynamically enable window occlusion 1
+ces.settings: Ignoring preference override of remote settings server
 console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
 1699454402937	Marionette	INFO	Marionette enabled
 Dynamically enable window occlusion 0
@@ -811,3 +814,328 @@ Read port: 57066
 1699454403116	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
 DevTools listening on ws://127.0.0.1:57059/devtools/browser/f8676d92-fcb5-447b-8c8b-2aa283a6777a
 1699454435881	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+JavaScript warning: https://abs.twimg.com/responsive-web/client-web-legacy/main.312cdf0a.js, line 1: Script terminated by timeout at:
+_/e/this._updateSessionStorage@https://abs.twimg.com/responsive-web/client-web-legacy/main.312cdf0a.js:1:2759416
+
+1699460762505	Marionette	INFO	Stopped listening on port 57066
+Dynamically enable window occlusion 1
+1700063426130	geckodriver	INFO	Listening on 127.0.0.1:61218
+1700063429159	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61219" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Luc\\AppData\\Local\\Temp\\rust_mozprofiletBAozn"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1700063429497	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1700063429578	Marionette	INFO	Listening on port 61227
+WebDriver BiDi listening on ws://127.0.0.1:61219
+Read port: 61227
+1700063429711	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:61219/devtools/browser/e9a50017-1a56-4336-9556-4e368de2e1c2
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://twitter.com."
+1700063459999	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://abs.twimg.com/responsive-web/client-web-legacy/main.ab6d141a.js, line 1: Script terminated by timeout at:
+_/e/this._updateSessionStorage@https://abs.twimg.com/responsive-web/client-web-legacy/main.ab6d141a.js:1:2681154
+
+1700063522247	Marionette	INFO	Stopped listening on port 61227
+Dynamically enable window occlusion 1
+1700063523591	geckodriver	INFO	Listening on 127.0.0.1:61313
+1700063526621	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61314" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Luc\\AppData\\Local\\Temp\\rust_mozprofileN3nbbS"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1700063526823	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1700063526896	Marionette	INFO	Listening on port 61321
+WebDriver BiDi listening on ws://127.0.0.1:61314
+Read port: 61321
+1700063527005	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:61314/devtools/browser/b6c97ba6-0e0b-44f8-9afe-95288d74f307
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://twitter.com."
+JavaScript error: https://abs.twimg.com/responsive-web/client-web-legacy/vendor.98c8ad5a.js, line 99: Error: ApiError: https://api.twitter.com/1.1/account/settings.json HTTP-0 codes:[1004]
+1700063557195	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://abs.twimg.com/responsive-web/client-web-legacy/main.ab6d141a.js, line 1: Script terminated by timeout at:
+_/e/this._updateSessionStorage@https://abs.twimg.com/responsive-web/client-web-legacy/main.ab6d141a.js:1:2681154
+
+1700064068770	Marionette	INFO	Stopped listening on port 61321
+Dynamically enable window occlusion 1
+ces.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1700063606176	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1700063606250	Marionette	INFO	Listening on port 61405
+WebDriver BiDi listening on ws://127.0.0.1:61398
+Read port: 61405
+1700063606363	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:61398/devtools/browser/a69c86db-bd6f-47e6-867e-817354974903
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://twitter.com."
+JavaScript error: https://twitter.com/search?q=chatgpt%20lang%3Afr%20-filter%3Alinks%20-filter%3Areplies&src=typed_query, line 158: ChunkLoadError: Loading chunk shared~bundle.Birdwatch~bundle.TwitterArticles~bundle.Compose~bundle.Settings~bundle.Display~bundle.Ocf~bundl failed.
+(error: https://abs.twimg.com/responsive-web/client-web-legacy/shared~bundle.Birdwatch~bundle.TwitterArticles~bundle.Compose~bundle.Settings~bundle.Display~bundle.Ocf~bundl.109c206a.js)
+1700063636335	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://abs.twimg.com/responsive-web/client-web-legacy/main.ab6d141a.js, line 1: Script terminated by timeout at:
+_/e/this._updateSessionStorage@https://abs.twimg.com/responsive-web/client-web-legacy/main.ab6d141a.js:1:2681154
+
+1700064069465	Marionette	INFO	Stopped listening on port 61405
+Dynamically enable window occlusion 1
+1700064071826	geckodriver	INFO	Listening on 127.0.0.1:61567
+1700064074868	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61568" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Luc\\AppData\\Local\\Temp\\rust_mozprofileajJhLy"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1700064075065	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1700064075138	Marionette	INFO	Listening on port 61575
+WebDriver BiDi listening on ws://127.0.0.1:61568
+Read port: 61575
+1700064075249	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:61568/devtools/browser/6d9601ee-8fa6-42cd-927e-1d35e06c795b
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://twitter.com."
+1700064106094	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://abs.twimg.com/responsive-web/client-web-legacy/main.ab6d141a.js, line 1: Script terminated by timeout at:
+_/e/this._updateSessionStorage@https://abs.twimg.com/responsive-web/client-web-legacy/main.ab6d141a.js:1:2681154
+
+1700064283375	Marionette	INFO	Stopped listening on port 61575
+Dynamically enable window occlusion 1
+1700064294581	geckodriver	INFO	Listening on 127.0.0.1:61702
+1700064297621	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61703" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Luc\\AppData\\Local\\Temp\\rust_mozprofileJNzg4X"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1700064297823	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1700064297896	Marionette	INFO	Listening on port 61711
+WebDriver BiDi listening on ws://127.0.0.1:61703
+Read port: 61711
+1700064298005	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:61703/devtools/browser/5dbc370b-26e0-46c7-82b1-49ff5feea5e8
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://twitter.com."
+1700064328938	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://abs.twimg.com/responsive-web/client-web-legacy/main.ab6d141a.js, line 1: Script terminated by timeout at:
+_/e/this._updateSessionStorage@https://abs.twimg.com/responsive-web/client-web-legacy/main.ab6d141a.js:1:2681154
+
+1700065933497	Marionette	INFO	Stopped listening on port 61711
+Dynamically enable window occlusion 1
+ces.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1700064491919	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1700064491992	Marionette	INFO	Listening on port 61798
+WebDriver BiDi listening on ws://127.0.0.1:61791
+Read port: 61798
+1700064492102	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:61791/devtools/browser/0027dabe-0271-404c-8f2d-e40ce170ea7e
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://twitter.com."
+JavaScript error: https://abs.twimg.com/responsive-web/client-web-legacy/vendor.98c8ad5a.js, line 99: Error: ApiError: https://twitter.com/i/api/1.1/strato/column/None/1718004882949500928,Windows%2FFirefox,pushNotifications/clients/permissionsState HTTP-0 codes:[1004]
+JavaScript error: https://abs.twimg.com/responsive-web/client-web-legacy/vendor.98c8ad5a.js, line 99: Error: ApiError: https://api.twitter.com/1.1/account/settings.json HTTP-0 codes:[1004]
+1700064522328	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://abs.twimg.com/responsive-web/client-web-legacy/main.ab6d141a.js, line 1: Script terminated by timeout at:
+_/e/this._updateSessionStorage@https://abs.twimg.com/responsive-web/client-web-legacy/main.ab6d141a.js:1:2681154
+
+1700065934268	Marionette	INFO	Stopped listening on port 61798
+Dynamically enable window occlusion 1
+ces.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1700065890483	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1700065890556	Marionette	INFO	Listening on port 62166
+WebDriver BiDi listening on ws://127.0.0.1:62157
+Read port: 62166
+1700065890675	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:62157/devtools/browser/985d69e1-6165-438c-ac77-4cf16182f9b8
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://twitter.com."
+1700065920871	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://abs.twimg.com/responsive-web/client-web-legacy/main.a76a9c2a.js, line 1: Script terminated by timeout at:
+_/e/this._updateSessionStorage@https://abs.twimg.com/responsive-web/client-web-legacy/main.a76a9c2a.js:1:2677334
+
+1700065935135	Marionette	INFO	Stopped listening on port 62166
+Dynamically enable window occlusion 1
+1700065937003	geckodriver	INFO	Listening on 127.0.0.1:62246
+1700065940027	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62247" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Luc\\AppData\\Local\\Temp\\rust_mozprofileWaAbge"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1700065940253	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1700065940348	Marionette	INFO	Listening on port 62256
+WebDriver BiDi listening on ws://127.0.0.1:62247
+Read port: 62256
+1700065940565	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:62247/devtools/browser/622bfbb0-3fdb-45a5-aee8-cd4cd72b68eb
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://twitter.com."
+1700065970944	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://twitter.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://twitter.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://twitter.com."
+JavaScript warning: https://abs.twimg.com/responsive-web/client-web-legacy/vendor.98c8ad5a.js, line 74: Script terminated by timeout at:
+hs@https://abs.twimg.com/responsive-web/client-web-legacy/vendor.98c8ad5a.js:74:94285
+ps@https://abs.twimg.com/responsive-web/client-web-legacy/vendor.98c8ad5a.js:74:93974
+enqueueSetState@https://abs.twimg.com/responsive-web/client-web-legacy/vendor.98c8ad5a.js:74:49575
+_/g.prototype.setState@https://abs.twimg.com/responsive-web/client-web-legacy/vendor.98c8ad5a.js:98:1386
+_/r/e._handlePlayerApi/S/e._unsubscribe<@https://abs.twimg.com/responsive-web/client-web-legacy/shared~bundle.TwitterArticles~bundle.ComposeMedia~loaders.video.VideoPlayerDefaultUI~loaders.video.VideoPlaye.8883877a.js:1:2240
+_/e/this.subscribe/a<@https://abs.twimg.com/responsive-web/client-web-legacy/shared~bundle.TwitterArticles~bundle.ComposeMedia~loaders.video.PlayerBase~loader.MediaPreviewVideoPlayer~loa.f938d60a.js:1:99999
+m@https://abs.twimg.com/responsive-web/client-web-legacy/vendor.98c8ad5a.js:98:10036
+_/n/</</<@https://abs.twimg.com/responsive-web/client-web-legacy/vendor.98c8ad5a.js:98:8263
+_/t.default/</<@https://abs.twimg.com/responsive-web/client-web-legacy/shared~bundle.TwitterArticles~bundle.ComposeMedia~loaders.video.PlayerBase~loader.MediaPreviewVideoPlayer~loa.f938d60a.js:1:2204
+_/Ir</</<@https://abs.twimg.com/responsive-web/client-web-legacy/shared~bundle.TwitterArticles~bundle.ComposeMedia~loaders.video.PlayerBase~loader.MediaPreviewVideoPlayer~loa.f938d60a.js:1:91010
+_/Ir</</<@https://abs.twimg.com/responsive-web/client-web-legacy/shared~bundle.TwitterArticles~bundle.ComposeMedia~loaders.video.PlayerBase~loader.MediaPreviewVideoPlayer~loa.f938d60a.js:1:89492
+_/Ir</</<@https://abs.twimg.com/responsive-web/client-web-legacy/shared~bundle.TwitterArticles~bundle.ComposeMedia~loaders.video.PlayerBase~loader.MediaPreviewVideoPlayer~loa.f938d60a.js:1:89235
+_/Ir</</<@https://abs.twimg.com/responsive-web/client-web-legacy/shared~bundle.TwitterArticles~bundle.ComposeMedia~loaders.video.PlayerBase~loader.MediaPreviewVideoPlayer~loa.f938d60a.js:1:87602
+_/Ir</</<@https://abs.twimg.com/responsive-web/client-web-legacy/shared~bundle.TwitterArticles~bundle.ComposeMedia~loaders.video.PlayerBase~loader.MediaPreviewVideoPlayer~loa.f938d60a.js:1:87227
+_/Ir</</<@https://abs.twimg.com/responsive-web/client-web-legacy/shared~bundle.TwitterArticles~bundle.ComposeMedia~loaders.video.PlayerBase~loader.MediaPreviewVideoPlayer~loa.f938d60a.js:1:86935
+_/Ir</</<@https://abs.twimg.com/responsive-web/client-web-legacy/shared~bundle.TwitterArticles~bundle.ComposeMedia~loaders.video.PlayerBase~loader.MediaPreviewVideoPlayer~loa.f938d60a.js:1:86708
+_/Ir</</<@https://abs.twimg.com/responsive-web/client-web-legacy/shared~bundle.TwitterArticles~bundle.ComposeMedia~loaders.video.PlayerBase~loader.MediaPreviewVideoPlayer~loa.f938d60a.js:1:86341
+value@https://abs.twimg.com/responsive-web/client-web-legacy/shared~bundle.TwitterArticles~bundle.ComposeMedia~loaders.video.PlayerBase~loader.MediaPreviewVideoPlayer~loa.f938d60a.js:1:102470
+_/e/this.updatePosition/Rr<@https://abs.twimg.com/responsive-web/client-web-legacy/shared~bundle.TwitterArticles~bundle.ComposeMedia~loaders.video.PlayerBase~loader.MediaPreviewVideoPlayer~loa.f938d60a.js:1:99230
+
+1700068091826	Marionette	INFO	Stopped listening on port 62256
+Dynamically enable window occlusion 1
+1700068105330	geckodriver	INFO	Listening on 127.0.0.1:63266
+1700068108357	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63267" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Luc\\AppData\\Local\\Temp\\rust_mozprofileCnEZBp"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1700068108557	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1700068108629	Marionette	INFO	Listening on port 63274
+WebDriver BiDi listening on ws://127.0.0.1:63267
+Read port: 63274
+1700068108738	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:63267/devtools/browser/0e5ee6e6-9948-494a-9a3c-37ff1e6663a4
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://twitter.com."
+1700068138577	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://abs.twimg.com/responsive-web/client-web-legacy/main.a76a9c2a.js, line 1: Script terminated by timeout at:
+_/e/this._updateSessionStorage@https://abs.twimg.com/responsive-web/client-web-legacy/main.a76a9c2a.js:1:2677334
+
+1700068302670	Marionette	INFO	Stopped listening on port 63274
+Dynamically enable window occlusion 1
+1700068390867	geckodriver	INFO	Listening on 127.0.0.1:63390
+1700068393896	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63391" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Luc\\AppData\\Local\\Temp\\rust_mozprofile8fHDJh"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1700068394103	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1700068394180	Marionette	INFO	Listening on port 63399
+WebDriver BiDi listening on ws://127.0.0.1:63391
+Read port: 63399
+1700068394292	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:63391/devtools/browser/1bf15684-ca0d-46c6-84fe-d17bf4b47ea0
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://twitter.com."
+JavaScript error: https://abs.twimg.com/responsive-web/client-web-legacy/vendor.98c8ad5a.js, line 99: Error: ApiError: https://api.twitter.com/1.1/account/settings.json HTTP-0 codes:[1004]
+1700068424132	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://abs.twimg.com/responsive-web/client-web-legacy/main.a76a9c2a.js, line 1: Script terminated by timeout at:
+_/e/this._updateSessionStorage@https://abs.twimg.com/responsive-web/client-web-legacy/main.a76a9c2a.js:1:2677334
+
+1700068518021	Marionette	INFO	Stopped listening on port 63399
+Dynamically enable window occlusion 1
+1700068521149	geckodriver	INFO	Listening on 127.0.0.1:63480
+1700068524183	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63481" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Luc\\AppData\\Local\\Temp\\rust_mozprofile3yILNn"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1700068524421	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1700068524509	Marionette	INFO	Listening on port 63497
+WebDriver BiDi listening on ws://127.0.0.1:63481
+Read port: 63497
+1700068524690	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:63481/devtools/browser/16a7b0da-8687-4f16-a81c-a2c072e9f334
+1700068554431	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://abs.twimg.com/responsive-web/client-web-legacy/main.a76a9c2a.js, line 1: Script terminated by timeout at:
+_/e/this._updateSessionStorage@https://abs.twimg.com/responsive-web/client-web-legacy/main.a76a9c2a.js:1:2677334
+
+1700068862554	Marionette	INFO	Stopped listening on port 63497
+Dynamically enable window occlusion 1
+ironment
+1700068541352	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1700068541437	Marionette	INFO	Listening on port 63558
+WebDriver BiDi listening on ws://127.0.0.1:63547
+Read port: 63558
+1700068541569	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:63547/devtools/browser/410d709a-66e9-4473-b1a6-2421ea18259e
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://twitter.com."
+JavaScript error: https://abs.twimg.com/responsive-web/client-web-legacy/vendor.98c8ad5a.js, line 99: Error: ApiError: https://api.twitter.com/1.1/account/settings.json HTTP-0 codes:[1004]
+1700068571415	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://abs.twimg.com/responsive-web/client-web-legacy/main.a76a9c2a.js, line 1: Script terminated by timeout at:
+_/e/this._updateSessionStorage@https://abs.twimg.com/responsive-web/client-web-legacy/main.a76a9c2a.js:1:2677334
+
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 573: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 573: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1700068863510	Marionette	INFO	Stopped listening on port 63558
+Dynamically enable window occlusion 1
+ 0
+1700068798616	Marionette	INFO	Listening on port 63757
+WebDriver BiDi listening on ws://127.0.0.1:63749
+Read port: 63757
+1700068798734	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:63749/devtools/browser/109e643b-a7cc-49f2-a427-c37e00b46a85
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://twitter.com."
+1700068828934	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://abs.twimg.com/responsive-web/client-web-legacy/ondemand.s.11947ffa.js, line 1: Script terminated by timeout at:
+FW@https://abs.twimg.com/responsive-web/client-web-legacy/ondemand.s.11947ffa.js:1:24400
+qW@https://abs.twimg.com/responsive-web/client-web-legacy/ondemand.s.11947ffa.js:1:12734
+CW@https://abs.twimg.com/responsive-web/client-web-legacy/ondemand.s.11947ffa.js:1:12866
+JYoXy@https://abs.twimg.com/responsive-web/client-web-legacy/ondemand.s.11947ffa.js:1:8990
+_/a/n/<@https://abs.twimg.com/responsive-web/client-web-legacy/ondemand.s.11947ffa.js:1:25502
+p@https://abs.twimg.com/responsive-web/client-web-legacy/vendor.98c8ad5a.js:99:630
+_/i/O/<@https://abs.twimg.com/responsive-web/client-web-legacy/vendor.98c8ad5a.js:99:1992
+_/i/k/</<@https://abs.twimg.com/responsive-web/client-web-legacy/vendor.98c8ad5a.js:99:1058
+n@https://abs.twimg.com/responsive-web/client-web-legacy/vendor.98c8ad5a.js:98:185486
+u@https://abs.twimg.com/responsive-web/client-web-legacy/vendor.98c8ad5a.js:98:185692
+_/i/</<@https://abs.twimg.com/responsive-web/client-web-legacy/vendor.98c8ad5a.js:98:185753
+_/i/<@https://abs.twimg.com/responsive-web/client-web-legacy/vendor.98c8ad5a.js:98:185632
+_/a/<@https://abs.twimg.com/responsive-web/client-web-legacy/ondemand.s.11947ffa.js:1:26040
+_/Jn/e/<@https://abs.twimg.com/responsive-web/client-web-legacy/main.a76a9c2a.js:1:463542
+p@https://abs.twimg.com/responsive-web/client-web-legacy/vendor.98c8ad5a.js:99:630
+_/i/O/<@https://abs.twimg.com/responsive-web/client-web-legacy/vendor.98c8ad5a.js:99:1992
+_/i/k/</<@https://abs.twimg.com/responsive-web/client-web-legacy/vendor.98c8ad5a.js:99:1058
+n@https://abs.twimg.com/responsive-web/client-web-legacy/vendor.98c8ad5a.js:98:185486
+u@https://abs.twimg.com/responsive-web/client-web-legacy/vendor.98c8ad5a.js:98:185692
+
+1700068864389	Marionette	INFO	Stopped listening on port 63757
+Dynamically enable window occlusion 1
+1700068869476	geckodriver	INFO	Listening on 127.0.0.1:63833
+1700068872510	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63834" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Luc\\AppData\\Local\\Temp\\rust_mozprofile1cgAuf"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1700068872717	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1700068872792	Marionette	INFO	Listening on port 63841
+WebDriver BiDi listening on ws://127.0.0.1:63834
+Read port: 63841
+1700068872906	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:63834/devtools/browser/701d57cb-ae21-4227-90e2-7b558f413d41
+1700068905953	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+e" "--marionette" "--remote-debugging-port" "63894" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Luc\\AppData\\Local\\Temp\\rust_mozprofilejf69oE"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1700068880455	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1700068880529	Marionette	INFO	Listening on port 63901
+WebDriver BiDi listening on ws://127.0.0.1:63894
+Read port: 63901
+1700068880643	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:63894/devtools/browser/053f3dde-2199-481f-8ab5-bdd2cb910460
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://twitter.com."
+JavaScript error: https://twitter.com/search?q=chatgpt%20lang%3Afr%20-filter%3Alinks%20-filter%3Areplies&src=typed_query, line 158: ChunkLoadError: Loading chunk shared~bundle.Birdwatch~bundle.TwitterArticles~bundle.Compose~bundle.Settings~bundle.Display~bundle.Ocf~bundl failed.
+(error: https://abs.twimg.com/responsive-web/client-web-legacy/shared~bundle.Birdwatch~bundle.TwitterArticles~bundle.Compose~bundle.Settings~bundle.Display~bundle.Ocf~bundl.109c206a.js)
+1700068911164	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1700069143545	geckodriver	INFO	Listening on 127.0.0.1:52782
+1700069146571	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52783" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Luc\\AppData\\Local\\Temp\\rust_mozprofile4UDBnS"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1700069146783	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1700069146860	Marionette	INFO	Listening on port 52794
+WebDriver BiDi listening on ws://127.0.0.1:52783
+Read port: 52794
+1700069146973	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:52783/devtools/browser/eb5d1de7-bbed-41d1-854e-fe86b40bb900
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://twitter.com."
+1700069176840	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1700069474936	geckodriver	INFO	Listening on 127.0.0.1:52972
+1700069477965	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52973" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Luc\\AppData\\Local\\Temp\\rust_mozprofiledzphYN"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1700069478313	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1700069478395	Marionette	INFO	Listening on port 52980
+WebDriver BiDi listening on ws://127.0.0.1:52973
+Read port: 52980
+1700069478488	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:52973/devtools/browser/1af3ac78-8176-4d4f-aa98-d6841332fd63
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://twitter.com."
+1700069509167	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
