@@ -43,27 +43,29 @@ ActionChains(driver)\
     .perform()
 time.sleep(1) #delai pour eviter soucis liés à la connection
 
-#  Complétion du username
-text_input = driver.find_element(
-    by=By.CSS_SELECTOR, value="input[data-testid='ocfEnterTextTextInput']")
-ActionChains(driver)\
-    .send_keys_to_element(text_input, "CCinques59752")\
-    .perform()
-time.sleep(1) #delai pour eviter soucis liés à la connection
-# Appui sur le bouton Suivant
 try:
-    next_button = driver.find_element(
-    by=By.XPATH, value="//span[contains(text(), 'Suivant')]"
+    #  Complétion du username
+    text_input = driver.find_element(
+        by=By.CSS_SELECTOR, value="input[data-testid='ocfEnterTextTextInput']")
+    ActionChains(driver)\
+        .send_keys_to_element(text_input, "CCinques59752")\
+        .perform()
+    time.sleep(1) #delai pour eviter soucis liés à la connection
+    # Appui sur le bouton Suivant
+    try:
+        next_button = driver.find_element(
+        by=By.XPATH, value="//span[contains(text(), 'Suivant')]"
+        )
+    except NoSuchElementException: #ATTENTION: text pas forcement en français, cas où text en anglais (bouton "Next")
+        next_button = driver.find_element(
+        by=By.XPATH, value="//span[contains(text(), 'Next')]"
     )
-except NoSuchElementException: #ATTENTION: text pas forcement en français, cas où text en anglais (bouton "Next")
-    next_button = driver.find_element(
-    by=By.XPATH, value="//span[contains(text(), 'Next')]"
-)
-ActionChains(driver)\
-    .click(next_button)\
-    .perform()
-time.sleep(2) #delai pour eviter soucis liés à la connection
-
+    ActionChains(driver)\
+        .click(next_button)\
+        .perform()
+    time.sleep(2) #delai pour eviter soucis liés à la connection
+except:
+    continue
 #Complétion mot de passe
 password_input = driver.find_element(
     by=By.NAME, value="password"
@@ -92,7 +94,7 @@ time.sleep(2) #delai pour eviter soucis liés à la connection
 scraper = gather.Scraper(driver)
 url_search = gather.construct_search_term('chatgpt', filter_links = False, filter_replies = False)
 #scraper.scroll_until_count(20)
-scraper.data_acquisition(url = url_search, tweet_target = 100)
+scraper.data_acquisition(url = url_search, tweet_target = 40)
 scraper.write_tweets_to_csv('output.csv')
 #scraper.scrape_user_data()
 
