@@ -10,13 +10,16 @@ from datetime import timedelta
 import time
 import csv
 
+#max number of consecutive fails allowed when scraping new data
+max_try = 10
+
 def construct_search_term(query, hashtag = '', language = 'fr', filter_replies = True, filter_links = True, min_likes = 0, min_faves = 0, min_retweets = 0, from_date = '', until_date = '' ):
     #NOTE: dates MUST be formatted as YYYY-MM-DD str
     #all above are default for twitter filters except language
     url = 'https://twitter.com/search?q='
     url+= query +' '
     if (hashtag != ''):#can only handle a single hashtag for now
-        url += '(%23'+hastags+')' + ' '
+        url += '(%23'+hashtag+')' + ' '
     if (language != ''):
         url += 'lang%3A'+ language + ' '
     if (filter_replies == False):
@@ -54,6 +57,10 @@ class Scraper:
         self.tweets = [] #tweet text
         #alphanumeric date/time of tweet
         self.dates = []
+        #number of likes
+        self.likes = []
+        #number of retweets
+        self.retweets = []
         #raw user info data and other misc
         self.raw = []
         #self
@@ -108,11 +115,15 @@ class Scraper:
         self.dates_temp = []
         self.tweets_temp = []
         self.raw_temp = []
+        self.likes_temp = []
+        self.retweets_temp = []
 
         #find all tweet bodies on current VISIBLE webpage. NOTE: only fetches the visible/topmost elements on page, will need to scroll down for more results as twitter displays new tweets while scrolling
         #self c1 = self.driver.find_element(by=By.XPATH, value="//div[contains(text(), 'views')]")
         raw_scrape_users = self.driver.find_elements(by=By.XPATH, value="//div[contains(@data-testid, 'User-Name')]") #all user-related info
         raw_scrape_tweets = self.driver.find_elements(by=By.XPATH, value="//div[contains(@data-testid, 'tweetText')]") #associated tweet text (same length as user info)
+        raw_scrape_likes = self.driver.find_elements(by=By.XPATH, value="//div[contains(@data-testid, 'like')]") #associated tweet text (same length as user info)
+        raw_scrape_retweets = self.driver.find_elements(by=By.XPATH, value="//div[contains(@data-testid, 'retweet')]") #associated tweet text (same length as user info)
 
 
         for ID in raw_scrape_users: #cleaning user info
@@ -149,6 +160,19 @@ class Scraper:
             #print(txt.text)
             #print("\n ##### \n")
 
+        for like in raw_scrape_likes:
+            like_txt = like.text
+            if len(like_txt) < 1:
+                like_txt = 0
+            self.likes_temp.append(like_txt)
+
+        for rt in raw_scrape_retweets:
+            rt_txt = rt.text
+            if len(rt_txt) < 1:
+                rt_txt = 0
+            self.retweets_temp.append(rt_txt)      
+
+
     def __scrub__(self): #sometimes tweets aren't linked to users or users aren't linked to tweets (age source not entirely loaded?). Removes unattributed tweets/usernames
         #ALL OF THESE SHOULD MATCH, otherwise we remove excess unnatributed
         tweet_count = len(self.tweets_temp)
@@ -161,6 +185,8 @@ class Scraper:
             self.handles_temp = self.handles_temp[:min_length]
             self.dates_temp = self.dates_temp[:min_length]
             self.raw_temp = self.raw_temp[:min_length]
+            self.likes_temp = self.likes_temp[:min_length]
+            self.retweets_temp = self.retweets_temp[:min_length]
         if (user_count != tweet_count): #probable, need to check for unnatributed values
             #print("length mismatch")
             min_length = min(user_count, tweet_count)
@@ -169,6 +195,8 @@ class Scraper:
             self.tweets_temp = self.tweets_temp[:min_length]
             self.dates_temp = self.dates_temp[:min_length]
             self.raw_temp = self.raw_temp[:min_length]
+            self.likes_temp = self.likes_temp[:min_length]
+            self.retweets_temp = self.retweets_temp[:min_length]
 
     def __archive_new__(self): #takes unique new data and stores it. Assumes that __scrub__ has been used previously
 
@@ -185,6 +213,8 @@ class Scraper:
                 self.handles_temp.pop(i)
                 self.dates_temp.pop(i)
                 self.raw_temp.pop(i)
+                self.likes_temp.pop(i)
+                self.retweets_temp.pop(i)
                 nbr_elems -= 1
             else:
                 i += 1
@@ -194,8 +224,8 @@ class Scraper:
         self.dates += self.dates_temp
         self.handles += self.handles_temp
         self.raw += self.raw_temp
-
-
+        self.likes += self.likes_temp
+        self.retweets += self.retweets_temp
 
 
 
@@ -207,7 +237,8 @@ class Scraper:
         self.__scrub__() #removes fluff
         self.__archive_new__()
         current_count = len(self.tweets)
-        while(current_count < tweet_target): #scrape until you have enough tweets
+        try_nb = 0
+        while(current_count < tweet_target and try_nb < max_try): #scrape until you have enough tweets
             print('currently scraped: ' + str(current_count))
             self.driver.execute_script('window.scrollBy(0, 2000)') #scroll down page by pixel amount. NOTE: more pixels is potentially faster but risks skipping content
             time.sleep(1)
@@ -215,7 +246,14 @@ class Scraper:
                 self.__scrape_current__() #get more tweets
                 self.__scrub__() #remove unlinked elements
                 self.__archive_new__() #only keep new elements
+
+                # if number of tweets hasn't changed, it means no new data has been scraped, scroll didn't work
+                if (current_count == len(self.tweets)):
+                    try_nb += 1
+                else: # if success, reset of try_nb
+                    try_nb = 0
             except:
+                print('failed to scrape')
                 time.sleep(2)
             current_count = len(self.tweets)
 
@@ -223,13 +261,13 @@ class Scraper:
     def write_tweets_to_csv(self, dest_filename, sep = ';', new_line =''):
 
         # Combine lists into a list of lists
-        data = [self.dates, self.usernames, self.handles, self.tweets]
+        data = [self.dates, self.usernames, self.handles, self.tweets, self.likes, self.retweets]
 
         # Transpose the data to have lists as rows and columns as columns
         data_transposed = list(map(list, zip(*data)))
 
         # Add a title for each column
-        header = ['Date', 'Username', 'Handle', 'Tweet body']
+        header = ['Date', 'Username', 'Handle', 'Tweet body', 'Number of likes', 'Number of retweets']
         csv_format = {
             'delimiter': ',',
             'quotechar': '"',

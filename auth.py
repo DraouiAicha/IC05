@@ -15,7 +15,7 @@ import gather
 # Init navigateur
 driver = webdriver.Firefox()
 
-driver.get("https://twitter.com/search?q=chatgpt%20lang%3Afr%20-filter%3Alinks%20-filter%3Areplies&src=typed_query")
+driver.get("https://twitter.com/i/flow/login")
 
 driver.implicitly_wait(10)
 
@@ -27,7 +27,7 @@ text_input = driver.find_element(
 ActionChains(driver)\
     .send_keys_to_element(text_input, "isabelle.massinon@etu.utc.fr")\
     .perform()
-time.sleep(2) #delai pour eviter soucis liés à la connection
+time.sleep(3) #delai pour eviter soucis liés à la connection
 
 # Appui sur le bouton Suivant
 try:
@@ -41,7 +41,7 @@ except NoSuchElementException: #ATTENTION: text pas forcement en français, cas 
 ActionChains(driver)\
     .click(next_button)\
     .perform()
-time.sleep(1) #delai pour eviter soucis liés à la connection
+time.sleep(2) #delai pour eviter soucis liés à la connection
 
 try:
     #  Complétion du username
@@ -63,9 +63,9 @@ try:
     ActionChains(driver)\
         .click(next_button)\
         .perform()
-    time.sleep(2) #delai pour eviter soucis liés à la connection
+    time.sleep(3) #delai pour eviter soucis liés à la connection
 except:
-    continue
+    pass
 #Complétion mot de passe
 password_input = driver.find_element(
     by=By.NAME, value="password"
@@ -73,7 +73,7 @@ password_input = driver.find_element(
 ActionChains(driver)\
     .send_keys_to_element(password_input, "IC05*Twitter")\
     .perform()
-time.sleep(1) #delai pour eviter soucis liés à la connection
+time.sleep(2) #delai pour eviter soucis liés à la connection
 
 #Appui sur le bouton Se Connecter
 try:
@@ -83,18 +83,18 @@ try:
 except NoSuchElementException: #cas text anglais
     login_button = driver.find_element(
     by=By.XPATH, value="//span[contains(text(), 'Log in')]")
-time.sleep(1) #delai pour eviter soucis liés à la connection
+time.sleep(2) #delai pour eviter soucis liés à la connection
 
 ActionChains(driver)\
     .click(login_button)\
     .perform()
-time.sleep(2) #delai pour eviter soucis liés à la connection
+time.sleep(3) #delai pour eviter soucis liés à la connection
 
 #recuperation du texte relatif à la requete (prototype/test)
 scraper = gather.Scraper(driver)
-url_search = gather.construct_search_term('chatgpt', filter_links = False, filter_replies = False)
+url_search = gather.construct_search_term('chatgpt', filter_links = False, filter_replies = False, from_date="2023-11-01", until_date="2023-11-28")
 #scraper.scroll_until_count(20)
-scraper.data_acquisition(url = url_search, tweet_target = 40)
+scraper.data_acquisition(url = url_search, tweet_target = 200)
 scraper.write_tweets_to_csv('output.csv')
 #scraper.scrape_user_data()
 
