@@ -161,16 +161,24 @@ class Scraper:
             #print("\n ##### \n")
 
         for like in raw_scrape_likes:
-            like_txt = like.text
-            if len(like_txt) < 1:
-                like_txt = 0
-            self.likes_temp.append(like_txt)
+            nb_like = like.text
+            if 'K' in nb_like:  #superior to 1000
+                nb_like = int(float(nb_like.replace('K', '').replace('','')) * 1000)
+            elif len(nb_like) < 1: #empty string
+                nb_like = 0
+            else:
+                nb_like = int(nb_like.replace(' ',''))
+            self.likes_temp.append(nb_like)
 
         for rt in raw_scrape_retweets:
-            rt_txt = rt.text
-            if len(rt_txt) < 1:
-                rt_txt = 0
-            self.retweets_temp.append(rt_txt)      
+            nb_rt = rt.text
+            if 'K' in nb_rt: #superior to 1000
+                nb_rt = int(float(nb_rt.replace('K', '').replace(' ','')) * 1000)
+            elif len(nb_rt) < 1: #empty string
+                nb_rt = 0
+            else:
+                nb_rt = int(nb_rt.replace(' ',''))
+            self.retweets_temp.append(nb_rt)      
 
 
     def __scrub__(self): #sometimes tweets aren't linked to users or users aren't linked to tweets (age source not entirely loaded?). Removes unattributed tweets/usernames
@@ -240,7 +248,7 @@ class Scraper:
         try_nb = 0
         while(current_count < tweet_target and try_nb < max_try): #scrape until you have enough tweets
             if try_nb > 0:
-                print(str(try_nb) + ' tries (' + str(current_count)+ 'scraped)')
+                print(str(try_nb) + ' tries (' + str(current_count)+ ' scraped)')
             else:
                 print('currently scraped: ' + str(current_count))
             self.driver.execute_script('window.scrollBy(0, 2000)') #scroll down page by pixel amount. NOTE: more pixels is potentially faster but risks skipping content
