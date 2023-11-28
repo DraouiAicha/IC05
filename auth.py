@@ -94,7 +94,7 @@ time.sleep(3) #delai pour eviter soucis liés à la connection
 scraper = gather.Scraper(driver)
 url_search = gather.construct_search_term('chatgpt', filter_links = False, filter_replies = False, from_date="2023-11-01", until_date="2023-11-28")
 #scraper.scroll_until_count(20)
-scraper.data_acquisition(url = url_search, tweet_target = 200)
+scraper.data_acquisition(url = url_search, tweet_target = 500)
 scraper.write_tweets_to_csv('output.csv')
 #scraper.scrape_user_data()
 

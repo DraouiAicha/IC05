@@ -239,9 +239,12 @@ class Scraper:
         current_count = len(self.tweets)
         try_nb = 0
         while(current_count < tweet_target and try_nb < max_try): #scrape until you have enough tweets
-            print('currently scraped: ' + str(current_count))
+            if try_nb > 0:
+                print(str(try_nb) + ' tries (' + str(current_count)+ 'scraped)')
+            else:
+                print('currently scraped: ' + str(current_count))
             self.driver.execute_script('window.scrollBy(0, 2000)') #scroll down page by pixel amount. NOTE: more pixels is potentially faster but risks skipping content
-            time.sleep(1)
+            time.sleep(1.5)
             try:
                 self.__scrape_current__() #get more tweets
                 self.__scrub__() #remove unlinked elements
