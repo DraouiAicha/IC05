@@ -13,7 +13,7 @@ import csv
 #max number of consecutive fails allowed when scraping new data
 max_try = 10
 
-def construct_search_term(query, hashtag = '', language = 'fr', filter_replies = True, filter_links = True, min_likes = 0, min_faves = 0, min_retweets = 0, from_date = '', until_date = '' ):
+def construct_search_term(query, hashtag = '', language = 'fr', filter_replies = True, filter_links = True, min_replies = 0, min_likes = 0, min_retweets = 0, from_date = '', until_date = '' ):
     #NOTE: dates MUST be formatted as YYYY-MM-DD str
     #all above are default for twitter filters except language
     url = 'https://twitter.com/search?q='
@@ -26,8 +26,8 @@ def construct_search_term(query, hashtag = '', language = 'fr', filter_replies =
         url+='-filter%3Areplies' + ' '
     if (filter_links == False):
         url+='-filter%3Alinks' +  ' '
-    url += 'min_replies%3A' + str(min_likes) +' '
-    url +=  'min_faves%3A'+ str(min_faves)+' '
+    url += 'min_replies%3A' + str(min_replies) +' '
+    url +=  'min_faves%3A'+ str(min_likes)+' '
     url += 'min_retweets%3A' + str(min_retweets) + ' '
     if (from_date != ''):
         url += ' since%3A' + str(from_date) +' '
@@ -67,7 +67,7 @@ class Scraper:
 
     def __parse_date__(self, date_str):
         # Define regular expressions for each date format
-        month_day_regex = re.compile(r'([A-Za-z]{3})\s(\d{2})$')
+        month_day_regex = re.compile(r'([A-Za-z]{3})\s(\d{1,2})$')
         age_minutes_regex = re.compile(r'(\d+)m')
         age_hours_regex = re.compile(r'(\d+)h')
         full_timestamp_regex = re.compile(r'([A-Za-z]{3})\s(\d{2})\s{0,1},\s{0,1}(\d{4})')
